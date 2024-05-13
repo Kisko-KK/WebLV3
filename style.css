@@ -1,0 +1,203 @@
+/* CSS variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-size-base: 16px;
+  --font-family-base: Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  color: #333;
+  margin: 0 auto; /* Auto margin left and right */
+  padding: 0;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header styles */
+.cart-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cart-badge {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  margin-left: 0.5em;
+  font-size: 0.8em;
+}
+.items-badge {
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  margin-left: 0.5em;
+  font-size: 0.8em;
+}
+
+.cart-container {
+  display: flex;
+}
+
+.cart-button {
+  margin-left: auto;
+}
+
+.remove-from-cart-btn,
+.add-to-cart-btn-cart {
+  color: white; /* Text color */
+  align-self: center; /* Center vertically */
+  border-radius: 5px;
+  font-size: 1.3em;
+}
+.remove-from-cart-btn {
+  background-color: #d9534f;
+}
+.add-to-cart-btn-cart {
+  background-color: green;
+  margin-right: 0.5em;
+}
+
+/* Items grid styles */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.3em;
+  margin-top: 1em;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.item h2 {
+  margin-top: 0.5em;
+}
+
+.item p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  border-radius: 10px;
+  background-color: white;
+  margin: 15% auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  max-width: 600px;
+}
+
+.close {
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-total {
+  font-weight: bold;
+}
+
+.buy-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.cart-items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.cart-items li span {
+  margin-left: 0.5em;
+  flex-grow: 1;
+}
+
+.cart-item-img {
+  margin-right: 1.5em;
+}
+
+/* Add this CSS */
+.divider {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
